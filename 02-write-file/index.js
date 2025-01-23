@@ -24,7 +24,7 @@ rl.on('line', (input) => {
   }
 });
 
-process.on('SIGINT', () => {
+rl.on('SIGINT', () => {
   console.log('Вы вышли из программы');
   rl.close();
   writeStream.end();
